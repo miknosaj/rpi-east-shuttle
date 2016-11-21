@@ -19,8 +19,8 @@ function busSchedule() {
         union.push(union1[i]);
       if (brinsmade1[i] >= marker)
         brinsmade.push(brinsmade1[i]);
-      // if (union.length >= 5)
-        // break;
+      if (union.length >= 5)
+        break;
     }
   } else {
     for (i in union0) {
@@ -28,8 +28,8 @@ function busSchedule() {
         union.push(union0[i]);
       if (brinsmade0[i] >= marker)
         brinsmade.push(brinsmade0[i]);
-      // if (union.length >= 5)
-        // break;
+      if (union.length >= 5)
+        break;
     }
   }
 
