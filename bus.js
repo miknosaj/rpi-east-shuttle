@@ -34,9 +34,9 @@ function bus() {
     if (unionH >= 12) {
       unionM += 'p';
       if (unionH > 12) unionH -= 12;
-    } else unionM += 'a';
+    } else unionM += ' AM';
     if (brinsmadeH >= 12) {
-      brinsmadeM += 'p';
+      brinsmadeM += ' PM';
       if (brinsmadeH > 12) brinsmadeH -= 12;
     } else brinsmadeM += 'a';
 
