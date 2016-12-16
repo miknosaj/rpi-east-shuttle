@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>East Shuttle</title>
+    <script src="./bus.js"></script>
+    <script>
+      function busSchedule() {
+        var div = document.getElementById('dynamic');
+        div.innerHTML += JSON.stringify(bus()); }
+      window.onload = busSchedule;
+    </script>
+  </head>
+  <body>
+    <div id="dynamic"></div>
+  </body>
+</html>
