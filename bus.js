@@ -32,13 +32,13 @@ function bus() {
 
     // AM PM
     if (unionH >= 12) {
-      unionM += 'p';
+      unionM += ' am';
       if (unionH > 12) unionH -= 12;
-    } else unionM += ' AM';
+    } else unionM += ' am';
     if (brinsmadeH >= 12) {
-      brinsmadeM += ' PM';
+      brinsmadeM += ' pm';
       if (brinsmadeH > 12) brinsmadeH -= 12;
-    } else brinsmadeM += 'a';
+    } else brinsmadeM += 'pm';
 
     schedule["Union"].push(unionH+':'+unionM);
     schedule["Brinsmade"].push(brinsmadeH+':'+brinsmadeM);
