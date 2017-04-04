@@ -1,7 +1,7 @@
 function bus() {
   var union = [];
-  var brinsmade = [];
-  var schedule = {"Union": [], "Brinsmade": []};
+  var blitman = [];
+  var schedule = {"Union": [], "Blitman": []};
 
   var d = new Date();
   var now = d.getHours()*100+d.getMinutes();
@@ -16,32 +16,32 @@ function bus() {
 
   for (i in u_data[isWeekend]) {
     if (u_data[isWeekend][i] >= now) union.push(u_data[isWeekend][i]);
-    if (b_data[isWeekend][i] >= now) brinsmade.push(b_data[isWeekend][i]);
+    if (b_data[isWeekend][i] >= now) blitman.push(b_data[isWeekend][i]);
     if (union.length >=5) break;
   }
 
   for (i in union) {
     var unionH = parseInt(union[i]/100);
     var unionM = (union[i]%100).toString();
-    var brinsmadeH = parseInt(brinsmade[i]/100);
-    var brinsmadeM = (brinsmade[i]%100).toString();
+    var blitmanH = parseInt(blitman[i]/100);
+    var blitmanM = (blitman[i]%100).toString();
 
     // Minute string padding
     if (unionM.length == 1) unionM = '0' + unionM;
-    if (brinsmadeM.length == 1) brinsmadeM = '0' + brinsmadeM;
+    if (blitmanM.length == 1) blitmanM = '0' + blitmanM;
 
     // AM PM
     if (unionH >= 12) {
       unionM += ' pm';
       if (unionH > 12) unionH -= 12;
     } else unionM += ' am';
-    if (brinsmadeH >= 12) {
-      brinsmadeM += ' pm';
-      if (brinsmadeH > 12) brinsmadeH -= 12;
-    } else brinsmadeM += ' am';
+    if (blitmanH >= 12) {
+      blitmanM += ' pm';
+      if (blitmanH > 12) blitmanH -= 12;
+    } else blitmanM += ' am';
 
     schedule["Union"].push(unionH+':'+unionM);
-    schedule["Brinsmade"].push(brinsmadeH+':'+brinsmadeM);
+    schedule["Blitman"].push(blitmanH+':'+blitmanM);
   }
 
   return schedule;

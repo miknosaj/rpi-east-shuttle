@@ -4,7 +4,7 @@ function busSchedule() {
   var s = bus();
 
   for (var i = 0; i < s["Union"].length; i++)
-    content += '<tr><td>'+ s["Union"][i] +'</td><td>'+ s["Brinsmade"][i] +'</td></tr>';
+    content += '<tr><td>'+ s["Union"][i] +'</td><td>'+ s["Blitman"][i] +'</td></tr>';
 
   div.innerHTML += content;
 }
